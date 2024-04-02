@@ -2,13 +2,14 @@ import { StatusBar } from 'react-native';
 import { NativeBaseProvider } from 'native-base';
 
 import { Loading } from '@components/Loading';
-import { SignIn } from '@screens/SignIn';
+import { Routes } from '@routes/index';
 
 import { THEME } from 'src/theme';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
+import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins'
+import { Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
 
 export default function App() {
-  const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold})
+  const [fontsLoaded] = useFonts({Poppins_700Bold, Roboto_400Regular, Roboto_700Bold})
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar 
@@ -16,7 +17,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <SignIn /> : <Loading/>}
+      {fontsLoaded ? <Routes /> : <Loading/>}
     </NativeBaseProvider>
   );
 }

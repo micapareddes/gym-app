@@ -1,20 +1,19 @@
-import { Center, Heading, Image, Text, View, ScrollView } from "native-base";
+import { Center, Heading, Image, Text, VStack, ScrollView, View, Link } from "native-base";
 
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
-import Logo from '@assets/logo.svg'
 import BackgroundImg from '@assets/background.png'
-
+import Logo from '@assets/logo.svg'
 import { Button } from "@components/Button";
 import { LinkButton } from "@components/LinkButton";
-import { Input } from "@components/Input";
 
 
-export function Signin() {
+export function Welcome() {
     const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
     function handleCreateAccount() {
+        navigation.navigate('signin')
     }
     
     function handleLogin() {
@@ -30,17 +29,13 @@ export function Signin() {
                 position='absolute'
             />
 
-            <ScrollView 
-                contentContainerStyle={{
-                    flexGrow: 1,
-                    marginTop: 110, 
-                    marginBottom: 32,
-                    marginHorizontal: 12,
-                    alignItems: 'center'
-                }} 
-                showsVerticalScrollIndicator={false}
-            > 
-            
+            <View 
+                flex={1} 
+                mt='110px'
+                mb={8}
+                mx={3}
+                alignItems='center'
+            >
                 <View flex={1}>
                 <Logo />
                 </View>
@@ -53,29 +48,22 @@ export function Signin() {
                         fontSize='xxl'
                         mb={2}
                     >
-                        Crie uma conta!
+                        Frase de impacto para te motivar!
                     </Heading>
-                    <Input 
-                        placeholder="Nome"
-                    />
-                    
-                    <Input 
-                        placeholder="E-mail"
-                        autoCapitalize="none"
-                        keyboardType="email-address"
-                    />
-
-                    <Input 
-                        placeholder="Senha"
-                        secureTextEntry
-                    />
-                    
-                    <Input 
-                        placeholder="Confirmar s senha"
-                        secureTextEntry
-                    />
+                    <Text
+                        color='gray.100'
+                        fontFamily='body'
+                        fontSize='sm'                
+                    >
+                        Mantenha seu treino organizado e facilmente acessível. Basta abrir sua conta e começar a treinar!
+                    </Text>
                 </Center>
-                <Button mb={4}>Criar conta</Button>
+                <Button 
+                    mb={4}
+                    onPress={handleLogin}
+                >
+                    Fazer login
+                </Button>
 
                 <View flexDirection={"row"}>
                     <Text 
@@ -83,16 +71,16 @@ export function Signin() {
                         fontFamily='body'
                         fontSize='sm'
                     >
-                        Já tem uma conta?
+                        Primeira vez?
                     </Text>
-                    <LinkButton
-                        onPress={handleLogin}
-                    >
-                         Faça login
+                    <LinkButton 
+                        onPress={handleCreateAccount}
+                    > 
+                        Crie uma conta
                     </LinkButton>
                 </View>
                 
-            </ScrollView>
+            </View>
         </View>
     )
 } 

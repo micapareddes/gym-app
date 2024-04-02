@@ -11,14 +11,15 @@ import { LinkButton } from "@components/LinkButton";
 import { Input } from "@components/Input";
 
 
-export function Signin() {
+export function Login() {
+
     const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
     function handleCreateAccount() {
+        navigation.navigate('signin')
     }
     
     function handleLogin() {
-        navigation.navigate('login')
     }
 
     return(
@@ -53,29 +54,19 @@ export function Signin() {
                         fontSize='xxl'
                         mb={2}
                     >
-                        Crie uma conta!
+                        Acesse sua conta!
                     </Heading>
-                    <Input 
-                        placeholder="Nome"
-                    />
-                    
                     <Input 
                         placeholder="E-mail"
                         autoCapitalize="none"
                         keyboardType="email-address"
                     />
-
                     <Input 
                         placeholder="Senha"
                         secureTextEntry
                     />
-                    
-                    <Input 
-                        placeholder="Confirmar s senha"
-                        secureTextEntry
-                    />
                 </Center>
-                <Button mb={4}>Criar conta</Button>
+                <Button mb={4}>Fazer login</Button>
 
                 <View flexDirection={"row"}>
                     <Text 
@@ -83,13 +74,11 @@ export function Signin() {
                         fontFamily='body'
                         fontSize='sm'
                     >
-                        Já tem uma conta?
+                        Primeira vez?
                     </Text>
                     <LinkButton
-                        onPress={handleLogin}
-                    >
-                         Faça login
-                    </LinkButton>
+                        onPress={handleCreateAccount}
+                    >Crie uma conta</LinkButton>
                 </View>
                 
             </ScrollView>
