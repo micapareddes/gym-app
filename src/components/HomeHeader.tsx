@@ -1,4 +1,4 @@
-import { Button, HStack, Heading, Icon, Text, VStack } from "native-base";
+import { HStack, Heading, Icon, Text, VStack } from "native-base";
 import { ProfilePhoto } from "./ProfilePhoto";
 
 import { MaterialIcons } from '@expo/vector-icons'
