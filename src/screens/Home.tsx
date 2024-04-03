@@ -5,10 +5,9 @@ import { ExcerciceCard } from "@components/ExcerciceCard";
 import { HomeHeader } from "@components/HomeHeader";
 
 import { useState } from "react";
-import { LayerBlur } from "@components/LayerBlur";
 
 export function Home() {
-    const [excercises, setExcercices] = useState(['Puxada Frontal', 'Remada Curva', 'Oi', 'Excercicio', 'Teste'])
+    const [excercises, setExcercices] = useState(['Puxada Frontal', 'Remada Curva',])
 
     return(
         <VStack flex={1}>
@@ -43,7 +42,6 @@ export function Home() {
                     _contentContainerStyle={{ paddingBottom: 20 }}
                 />
             </VStack>
-            <LayerBlur />
         </VStack>
     )
 }

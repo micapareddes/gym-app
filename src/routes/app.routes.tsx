@@ -45,7 +45,7 @@ const iconSize = sizes[8]
                 left: 10,
                 right: 10,
                 bottom: 30,
-                backgroundColor: 'transparent',
+                backgroundColor: colors.gray[700],
                 borderWidth: 1,
                 borderTopWidth: 1,
                 borderStyle: 'solid',
