@@ -1,4 +1,4 @@
-import { ExcerciceRecord } from "@components/ExcerciceRecord";
+import { ExcerciseRecord } from "@components/ExcerciseRecord";
 import { TitleHeader } from "@components/Header/TitleHeader";
 import { Heading, Text, VStack } from "native-base";
 import { useState } from "react";
@@ -26,7 +26,7 @@ export function History() {
                     <Heading color="gray.200" fontSize="sm" fontFamily="body" mt={4} mb={4}>{section.title}</Heading>
                 )}
                 renderItem={({item}) => (
-                    <ExcerciceRecord category="costas" name="remada baixa" time="08:13"/>
+                    <ExcerciseRecord category="costas" name="remada baixa" time="08:13"/>
                 )}
                 contentContainerStyle={data.length === 0 && {flex: 1, justifyContent: 'center'}}
                 ListEmptyComponent={() => (

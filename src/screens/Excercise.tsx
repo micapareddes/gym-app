@@ -6,12 +6,13 @@ import { ExcerciseHeader } from "@components/Header/ExcerciseHeader";
 
 import RoundedPlusSvg from "@assets/rounded-plus.svg"
 import { useState } from "react";
+import { Button } from "@components/Button/Button";
 
 type Props = {
 
 }
 
-export function Excercice({}: Props) {
+export function Excercise({}: Props) {
     const [notes, setNotes] = useState(['nota1', 'nota2', ])
     return(
         <>
@@ -22,6 +23,7 @@ export function Excercice({}: Props) {
                 alt="image"
                 height={180}
                 rounded="lg"
+                resizeMode="cover"
             />
             <HStack
                     justifyContent="space-between" 
@@ -39,6 +41,7 @@ export function Excercice({}: Props) {
                     <TouchableOpacity style={{height: 18}} activeOpacity={0.6}>
                         <RoundedPlusSvg height={18} width={18}/>
                     </TouchableOpacity>
+                    <Button>Marcar como concluido</Button>
             </HStack>
             <FlatList 
                 data={notes}

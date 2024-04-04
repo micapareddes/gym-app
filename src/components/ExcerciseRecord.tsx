@@ -6,7 +6,7 @@ type Props = {
     time: string
 }
 
-export function ExcerciceRecord({category, name, time}: Props) {
+export function ExcerciseRecord({category, name, time}: Props) {
     return(
         <HStack bg="gray.600" alignItems="center" px={5} py={4} mb={3} rounded={4}>
             <VStack mr={5} flex={1}>

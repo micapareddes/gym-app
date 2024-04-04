@@ -1,6 +1,6 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
 
-import { Excercice } from '@screens/Excercice'
+import { Excercise } from '@screens/Excercise'
 import { History } from '@screens/History'
 import { Home } from '@screens/Home'
 import { Profile } from '@screens/Profile'
@@ -19,7 +19,7 @@ type AppRoutes = {
     workout: undefined
     history: undefined
     profile: undefined
-    excercice: undefined
+    excercise: undefined
     newWorkout: undefined
 }
 
@@ -109,8 +109,8 @@ const iconSize = sizes[8]
                 }}
             />
             <Screen
-                name='excercice'
-                component={Excercice}
+                name='excercise'
+                component={Excercise}
                 options={{tabBarButton: () => null}}
             />
             <Screen
