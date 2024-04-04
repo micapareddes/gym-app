@@ -6,10 +6,11 @@ type Props = {
 
 export function Anotation({}: Props) {
     return(
-        <VStack
+        <HStack
             bg="gray.600"
             rounded="xl"
             alignItems="center"
+            justifyContent="space-between"
             px={5}
             py={4}
             mb={3}
@@ -18,19 +19,18 @@ export function Anotation({}: Props) {
                 color="gray.100"
                 fontFamily="medium"
                 fontSize="md"
-                numberOfLines={1}
-                alignSelf="flex-start"
+                mr={5}
+                flex={1}
             >
-                10 10 8 20kg
+                08 10 10 20kg
             </Text>
             <Text
                 color="gray.200"
                 fontFamily="body"
                 fontSize="xs" 
-                alignSelf="flex-end"  
             >
                 26 de Março
             </Text>
-        </VStack>
+        </HStack>
     )
 }
