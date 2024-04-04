@@ -1,32 +1,36 @@
-import { HStack, Heading, Icon, Image, Text, VStack } from "native-base";
+import { HStack, Heading, Icon, Image, Text, VStack, View } from "native-base";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 import { Entypo } from '@expo/vector-icons'
 
 type Props = TouchableOpacityProps & {
-
+    image?: boolean
 }
 
-export function FitnessCard({...rest}: Props) {
+export function FitnessCard({image=false, ...rest}: Props) {
     return(
         <TouchableOpacity {...rest}>
             <HStack
                 backgroundColor="gray.500"
-                borderRadius={4}
+                borderRadius="xl"
                 p={2}
                 pr={4}
                 mb={3}
                 alignItems="center"
             > 
-                <Image 
+                { image ? 
+                    <Image 
                     source={{ uri: 'https://github.com/micapareddes.png' }}
                     alt="foto do usuário"
                     w={16}
                     h={16}
                     mr={4}
                     rounded="md"
-                    resizeMode="center"
-                />
+                    resizeMode="cover"
+                    />
+                    : <View h={16} mr={4} />
+                }
+
                 <VStack flex={1}>
                     <Heading
                         fontFamily="bold"
