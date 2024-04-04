@@ -1,7 +1,53 @@
-import { Text } from "native-base";
+import { HStack, Image, Text, VStack } from "native-base";
+import { FlatList, TouchableOpacity } from "react-native";
 
-export function Excercice() {
+import { Anotation } from "@components/Anotation";
+import { ExcerciseHeader } from "@components/ExcerciseHeader";
+
+import RoundedPlusSvg from "@assets/rounded-plus.svg"
+import { useState } from "react";
+
+type Props = {
+
+}
+
+export function Excercice({}: Props) {
+    const [notes, setNotes] = useState(['nota1', 'nota2', ])
     return(
-        <Text>Excercice</Text>
+        <>
+        <ExcerciseHeader excerciseName="Puxada frontal"/>
+        <VStack mx={4} >
+            <Image 
+                source={{ uri: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }}
+                alt="image"
+                height={180}
+                rounded="lg"
+            />
+            <HStack
+                    justifyContent="space-between" 
+                    alignItems="center"
+                    mb={3}
+                    mt={12}
+                >
+                    <Text
+                        color="gray.200"
+                        fontFamily="body"
+                        fontSize="sm"
+                    >
+                        Notas
+                    </Text>
+                    <TouchableOpacity style={{height: 18}} activeOpacity={0.6}>
+                        <RoundedPlusSvg height={18} width={18}/>
+                    </TouchableOpacity>
+            </HStack>
+            <FlatList 
+                data={notes}
+                keyExtractor={item => item}
+                renderItem={() => (
+                    <Anotation />
+                )}
+            />
+        </VStack>
+        </>
     )
 }
