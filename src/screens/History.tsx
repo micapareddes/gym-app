@@ -1,5 +1,5 @@
-import { HistoryCard } from "@components/HistoryCard";
-import { TitleHeader } from "@components/TitleHeader";
+import { ExcerciceRecord } from "@components/ExcerciceRecord";
+import { TitleHeader } from "@components/Header/TitleHeader";
 import { Heading, Text, VStack } from "native-base";
 import { useState } from "react";
 import { SectionList } from "react-native";
@@ -26,7 +26,7 @@ export function History() {
                     <Heading color="gray.200" fontSize="sm" fontFamily="body" mt={4} mb={4}>{section.title}</Heading>
                 )}
                 renderItem={({item}) => (
-                    <HistoryCard category="costas" name="remada baixa" time="08:13"/>
+                    <ExcerciceRecord category="costas" name="remada baixa" time="08:13"/>
                 )}
                 contentContainerStyle={data.length === 0 && {flex: 1, justifyContent: 'center'}}
                 ListEmptyComponent={() => (

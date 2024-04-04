@@ -1,7 +1,7 @@
-import { Button } from "@components/Button";
+import { Button } from "@components/Button/Button";
 import { Input } from "@components/Input";
 import { ProfilePhoto } from "@components/ProfilePhoto";
-import { TitleHeader } from "@components/TitleHeader";
+import { TitleHeader } from "@components/Header/TitleHeader";
 import { Center, ScrollView, Skeleton, Text, VStack, View } from "native-base";
 import { useState } from "react";
 import { TouchableOpacity } from "react-native";

@@ -6,8 +6,8 @@ import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 import Logo from '@assets/logo.svg'
 import BackgroundImg from '@assets/background.png'
 
-import { Button } from "@components/Button";
-import { LinkButton } from "@components/LinkButton";
+import { Button } from "@components/Button/Button";
+import { LinkButton } from "@components/Button/LinkButton";
 import { Input } from "@components/Input";
 
 

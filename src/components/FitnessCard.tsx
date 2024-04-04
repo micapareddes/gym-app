@@ -7,7 +7,7 @@ type Props = TouchableOpacityProps & {
 
 }
 
-export function ExcerciceCard({...rest}: Props) {
+export function FitnessCard({...rest}: Props) {
     return(
         <TouchableOpacity {...rest}>
             <HStack

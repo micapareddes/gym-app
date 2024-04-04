@@ -2,7 +2,7 @@ import { HStack, Image, Text, VStack } from "native-base";
 import { FlatList, TouchableOpacity } from "react-native";
 
 import { Anotation } from "@components/Anotation";
-import { ExcerciseHeader } from "@components/ExcerciseHeader";
+import { ExcerciseHeader } from "@components/Header/ExcerciseHeader";
 
 import RoundedPlusSvg from "@assets/rounded-plus.svg"
 import { useState } from "react";

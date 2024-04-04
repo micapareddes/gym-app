@@ -5,8 +5,8 @@ import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
 import BackgroundImg from '@assets/background.png'
 import Logo from '@assets/logo.svg'
-import { Button } from "@components/Button";
-import { LinkButton } from "@components/LinkButton";
+import { Button } from "@components/Button/Button";
+import { LinkButton } from "@components/Button/LinkButton";
 
 
 export function Welcome() {

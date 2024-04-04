@@ -1,8 +1,8 @@
 import { Center, FlatList, HStack, Heading, ScrollView, Text, VStack } from "native-base";
 
 import { DaysFilter } from "@components/DaysFilter";
-import { ExcerciceCard } from "@components/ExcerciceCard";
-import { HomeHeader } from "@components/HomeHeader";
+import { FitnessCard } from "@components/FitnessCard";
+import { HomeHeader } from "@components/Header/HomeHeader";
 
 import { useState } from "react";
 
@@ -37,7 +37,7 @@ export function Home() {
                 <FlatList 
                     data={ excercises }
                     keyExtractor={ item => item }
-                    renderItem={ () => <ExcerciceCard /> }
+                    renderItem={ () => <FitnessCard /> }
                     showsHorizontalScrollIndicator={ false }
                     _contentContainerStyle={{ paddingBottom: 20 }}
                 />
