@@ -17,8 +17,9 @@ export function FitnessCard({image=false, ...rest}: Props) {
                 pr={4}
                 mb={3}
                 alignItems="center"
+                h={20}
             > 
-                { image ? 
+                { image && 
                     <Image 
                     source={{ uri: 'https://github.com/micapareddes.png' }}
                     alt="foto do usuário"
@@ -28,7 +29,6 @@ export function FitnessCard({image=false, ...rest}: Props) {
                     rounded="md"
                     resizeMode="cover"
                     />
-                    : <View h={16} mr={4} />
                 }
 
                 <VStack flex={1}>
