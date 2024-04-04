@@ -24,7 +24,9 @@ export function Excercise({}: Props) {
                 height={180}
                 rounded="lg"
                 resizeMode="cover"
+                mb={4}
             />
+            <Button>Marcar como concluido</Button>
             <HStack
                     justifyContent="space-between" 
                     alignItems="center"
@@ -41,7 +43,7 @@ export function Excercise({}: Props) {
                     <TouchableOpacity style={{height: 18}} activeOpacity={0.6}>
                         <RoundedPlusSvg height={18} width={18}/>
                     </TouchableOpacity>
-                    <Button>Marcar como concluido</Button>
+                    
             </HStack>
             <FlatList 
                 data={notes}
