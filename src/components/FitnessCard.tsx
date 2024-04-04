@@ -25,13 +25,12 @@ export function FitnessCard({image=false, ...rest}: Props) {
                     alt="foto do usuário"
                     w={16}
                     h={16}
-                    mr={4}
                     rounded="md"
                     resizeMode="cover"
                     />
                 }
 
-                <VStack flex={1}>
+                <VStack flex={1} ml={4}>
                     <Heading
                         fontFamily="bold"
                         fontSize="lg"
