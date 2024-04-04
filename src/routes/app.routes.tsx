@@ -111,12 +111,10 @@ const iconSize = sizes[8]
             <Screen
                 name='excercise'
                 component={Excercise}
-                options={{tabBarButton: () => null}}
             />
             <Screen
                 name='newWorkout'
                 component={NewWorkout}
-                options={{tabBarButton: () => null}}
             />
 
         </Navigator>

@@ -17,6 +17,9 @@ export function FabButton({...rest}: Props) {
                     height={32}
                 />
             }
+            _pressed={{
+                backgroundColor: 'red.700'
+            }}
             {...rest}
         >
             

@@ -24,7 +24,8 @@ export function Button({variant='default', size='lg', ...rest}: Props) {
             _text={{
                 color: variant === "outline" ? "red.500" : "white", 
                 fontFamily: "bold",
-                fontSize: "md"
+                fontSize: "md",
+                width: 'full',
             }}
             {...rest}
         />

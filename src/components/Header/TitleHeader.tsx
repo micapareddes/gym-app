@@ -21,6 +21,11 @@ export function TitleHeader({title, goBack=false}: Props) {
                 goBack && (
                     <TouchableOpacity 
                         onPress={handleGoBack}
+                        style={{
+                            position: 'absolute',
+                            top: 64,
+                            left: 12,
+                        }}
                     >
                         <ArrowLeft width={24} height={24} />
                     </TouchableOpacity>
