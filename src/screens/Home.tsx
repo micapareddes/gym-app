@@ -37,7 +37,7 @@ export function Home() {
                 <FlatList 
                     data={ excercises }
                     keyExtractor={ item => item }
-                    renderItem={ () => <FitnessCard /> }
+                    renderItem={ () => <FitnessCard image /> }
                     showsHorizontalScrollIndicator={ false }
                     _contentContainerStyle={{ paddingBottom: 20 }}
                 />
