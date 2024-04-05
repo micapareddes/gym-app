@@ -24,20 +24,15 @@ recording daily exercises, and customizing user profiles. Built on React Native 
 
 2.  Home Page:
 
-    Upon login, you're greeted by the home page. Here, workouts are organized with a filter for the week, allowing you to easily find the
-    workout group planned for each day.
+    Upon login, you're greeted by the home page. Here, workouts are organized with a filter for the week, allowing you to easily find the workout group planned for each day.
 
 3.  Creating Workout Groups:
 
-         Users can create custom workout groups by specifying a name, the days of the week it will be active, the exercises included, and whether
-
-    it's the current workout regimen. It's possible to select multiple groups as 'current' for flexibility in workout routines.
+    Users can create custom workout groups by specifying a name, the days of the week it will be active, the exercises included, and whether it's the current workout regimen. It's possible to select multiple groups as 'current' for flexibility in workout routines.
 
 4.  History Tracking:
 
-         The app includes a history page that logs exercises completed each day. To add an exercise to this log, simply mark it as completed. This feature
-
-    is invaluable for tracking progress over time.
+    The app includes a history page that logs exercises completed each day. To add an exercise to this log, simply mark it as completed. This feature is invaluable for tracking progress over time.
 
 5.  Exercise Notes:
 
